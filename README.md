@@ -30,10 +30,50 @@ node app.js
 ```
 ## 📡 Endpoints disponibles
 
+### 🔹 Registrar un envío
+```bash
+POST /envio
+```
+**Descripción**: Registra un nuevo envío y descuenta créditos del cliente.
+
+Cuerpo de la solicitud:
+```json
+{
+  "nombre": "Juan Pérez",
+  "direccion": "Colonia Escalón, San Salvador",
+  "telefono": "555-1234",
+  "referencia": "Casa con portón azul",
+  "observacion": "Entregar en horario de la tarde",
+  "productos": [
+    {
+      "descripcion": "Laptop",
+      "peso": 2.5,
+      "bultos": 1,
+      "fecha_entrega": "2025-05-10"
+    },
+    {
+      "descripcion": "Monitor",
+      "peso": 4.5,
+      "bultos": 1,
+      "fecha_entrega": "2025-05-10"
+    }
+  ],
+  "monto": 135
+}
+```
+
+Ejemplo de respuesta:
+```json
+{
+  "message": "Envío registrado exitosamente.",
+  "creditoRestante": 28
+}
+```
 ### 🔹 Obtener todos los envíos
 ```bash
 GET /envio
 ```
+---
 **Descripción**: Devuelve una lista de todos los envíos registrados.
 
 Ejemplo de respuesta:
@@ -99,49 +139,6 @@ Ejemplo de respuesta:
 ]
 
 ```
-
----
-
-### 🔹 Registrar un envío
-```bash
-POST /envio
-```
-**Descripción**: Registra un nuevo envío y descuenta créditos del cliente.
-
-Cuerpo de la solicitud:
-```json
-{
-  "nombre": "Juan Pérez",
-  "direccion": "Colonia Escalón, San Salvador",
-  "telefono": "555-1234",
-  "referencia": "Casa con portón azul",
-  "observacion": "Entregar en horario de la tarde",
-  "productos": [
-    {
-      "descripcion": "Laptop",
-      "peso": 2.5,
-      "bultos": 1,
-      "fecha_entrega": "2025-05-10"
-    },
-    {
-      "descripcion": "Monitor",
-      "peso": 4.5,
-      "bultos": 1,
-      "fecha_entrega": "2025-05-10"
-    }
-  ],
-  "monto": 135
-}
-```
-
-Ejemplo de respuesta:
-```json
-{
-  "message": "Envío registrado exitosamente.",
-  "creditoRestante": 28
-}
-```
-
 ---
 
 ### 🔹 Verificar créditos disponibles de un cliente
