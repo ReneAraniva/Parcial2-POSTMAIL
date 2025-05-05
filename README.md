@@ -69,11 +69,11 @@ Ejemplo de respuesta:
   "creditoRestante": 28
 }
 ```
+---
 ### 🔹 Obtener todos los envíos
 ```bash
 GET /envio
 ```
----
 **Descripción**: Devuelve una lista de todos los envíos registrados.
 
 Ejemplo de respuesta:
