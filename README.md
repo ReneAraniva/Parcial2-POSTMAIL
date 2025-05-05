@@ -13,7 +13,7 @@ API REST para gestionar clientes y envíos de la empresa POSTMAIL. Esta API perm
 
 - Tener instalado Node.js
 - Tener una base de datos MongoDB (local o Atlas)
-- Crear un archivo `.env` con la variable `MONGODB_URI`, la que tiene por defecto es `mongodb://localhost:27017/dbPostMail`
+- Crear un archivo `.env` con la variable `MONGODB_URI`, la que tiene por defecto la api es `mongodb://localhost:27017/dbPostMail`
 
 ## 📥 Instalación
 
