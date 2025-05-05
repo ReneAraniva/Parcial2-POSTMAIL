@@ -13,7 +13,7 @@ API REST para gestionar clientes y envíos de la empresa POSTMAIL. Esta API perm
 
 - Tener instalado Node.js
 - Tener una base de datos MongoDB (local o Atlas)
-- Crear un archivo `.env` con la variable `MONGODB_URI`
+- Crear un archivo `.env` con la variable `MONGODB_URI`, la que tiene por defecto es `mongodb://localhost:27017/dbPostMail`
 
 ## 📥 Instalación
 
@@ -55,8 +55,49 @@ Ejemplo de respuesta:
         "fecha_entrega": "2025-05-10"
       }
     ]
+  },
+  {
+    "_id": "645a1b2c3d4e5f6789012347",
+    "clienteId": "645a1b2c3d4e5f6789012345",
+    "nombre": "María Gómez",
+    "direccion": "Residencial San Benito, San Salvador",
+    "telefono": "555-5678",
+    "referencia": "Edificio color beige, apartamento 3B",
+    "observacion": "Llamar antes de entregar",
+    "productos": [
+      {
+        "descripcion": "Teléfono celular",
+        "peso": 0.3,
+        "bultos": 1,
+        "fecha_entrega": "2025-05-12"
+      },
+      {
+        "descripcion": "Audífonos inalámbricos",
+        "peso": 0.2,
+        "bultos": 1,
+        "fecha_entrega": "2025-05-12"
+      }
+    ]
+  },
+  {
+    "_id": "645a1b2c3d4e5f6789012348",
+    "clienteId": "645a1b2c3d4e5f6789012345",
+    "nombre": "Carlos Méndez",
+    "direccion": "Colonia Miramonte, San Salvador",
+    "telefono": "555-9012",
+    "referencia": "Casa frente a parque infantil",
+    "observacion": "No dejar con vecinos",
+    "productos": [
+      {
+        "descripcion": "Impresora multifuncional",
+        "peso": 6.0,
+        "bultos": 1,
+        "fecha_entrega": "2025-05-15"
+      }
+    ]
   }
 ]
+
 ```
 
 ---
