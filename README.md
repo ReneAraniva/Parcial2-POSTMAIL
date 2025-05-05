@@ -1,4 +1,3 @@
-
 # 📦 POSTMAIL API
 
 API REST para gestionar clientes y envíos de la empresa POSTMAIL. Esta API permite registrar clientes, consultar sus créditos, registrar productos y gestionar envíos.
@@ -13,7 +12,7 @@ API REST para gestionar clientes y envíos de la empresa POSTMAIL. Esta API perm
 
 - Tener instalado Node.js
 - Tener una base de datos MongoDB (local o Atlas)
-- Crear un archivo `.env` con la variable `MONGODB_URI`, la que tiene por defecto la api es `mongodb://localhost:27017/dbPostMail`
+- Crear un archivo `.env` con la variable `MONGODB_URI`, la que tiene por defecto la API es `mongodb://localhost:27017/dbPostMail`
 
 ## 📥 Instalación
 
@@ -28,6 +27,7 @@ npm install
 ```bash
 node app.js
 ```
+
 ## 📡 Endpoints disponibles
 
 ### 🔹 Registrar un envío
@@ -35,6 +35,11 @@ node app.js
 POST /envio
 ```
 **Descripción**: Registra un nuevo envío y descuenta créditos del cliente.
+
+**Montos disponibles**:
+- `$135`: 30 créditos.
+- `$160`: 40 créditos.
+- `$180`: 60 créditos.
 
 Cuerpo de la solicitud:
 ```json
@@ -69,7 +74,9 @@ Ejemplo de respuesta:
   "creditoRestante": 28
 }
 ```
+
 ---
+
 ### 🔹 Obtener todos los envíos
 ```bash
 GET /envio
@@ -118,27 +125,10 @@ Ejemplo de respuesta:
         "fecha_entrega": "2025-05-12"
       }
     ]
-  },
-  {
-    "_id": "645a1b2c3d4e5f6789012348",
-    "clienteId": "645a1b2c3d4e5f6789012345",
-    "nombre": "Carlos Méndez",
-    "direccion": "Colonia Miramonte, San Salvador",
-    "telefono": "555-9012",
-    "referencia": "Casa frente a parque infantil",
-    "observacion": "No dejar con vecinos",
-    "productos": [
-      {
-        "descripcion": "Impresora multifuncional",
-        "peso": 6.0,
-        "bultos": 1,
-        "fecha_entrega": "2025-05-15"
-      }
-    ]
   }
 ]
-
 ```
+
 ---
 
 ### 🔹 Verificar créditos disponibles de un cliente
@@ -216,6 +206,7 @@ Ejemplo de respuesta:
 }
 ```
 
+---
 
 ## 🗂️ Estructura de carpetas
 
@@ -235,4 +226,3 @@ Examen Parcial final/
 ```
 
 ---
-
