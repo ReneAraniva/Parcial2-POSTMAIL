@@ -34,7 +34,11 @@ node app.js
 ```bash
 POST /envio
 ```
-**Descripción**: Registra un nuevo envío y descuenta créditos del cliente.
+**Descripción**: Registra un nuevo envío,guarda los datos del cliente y descuenta créditos del cliente segun el peso.
+
+**Registro del cliente**:
+-Al llenar la solicitud del envio se registran los datos del cliente para no tener la necesidad de registralo para hacer el pedido
+-Se guardan los datos del id auto generado junto con el nombre del cliente y se le traduce los monto a creditos
 
 **Funcionamiento de los créditos según el peso**:
 - Cada envío consume créditos del cliente dependiendo del peso total de los productos incluidos:
