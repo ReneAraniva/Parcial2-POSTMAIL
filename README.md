@@ -20,6 +20,8 @@ API REST para gestionar clientes y envíos de la empresa POSTMAIL. Esta API perm
 git clone https://github.com/ReneAraniva/Parcial2-POSTMAIL.git
 cd Examen-Parcial-final
 npm install
+npm init -y
+npm install express mongoose dotenv
 ```
 
 ## ▶️ Ejecutar el servidor
@@ -34,11 +36,13 @@ node app.js
 ```bash
 POST /envio
 ```
-**Descripción**: Registra un nuevo envío,guarda los datos del cliente y descuenta créditos del cliente segun el peso.
+**Descripción**:  
+Crea un nuevo envío y registra automáticamente al cliente si no existe. Los créditos se descuentan según el peso total del envío.
 
-**Registro del cliente**:
--Al llenar la solicitud del envio se registran los datos del cliente para no tener la necesidad de registralo para hacer el pedido
--Se guardan los datos del id auto generado junto con el nombre del cliente y se le traduce los monto a creditos
+**Registro del cliente**:  
+- Al completar el formulario de envío, los datos del cliente se registran automáticamente.  
+- No es necesario registrar al cliente previamente.  
+- Se guarda el ID generado, junto con el nombre y la conversión del monto ingresado a créditos disponibles.
 
 **Funcionamiento de los créditos según el peso**:
 - Cada envío consume créditos del cliente dependiendo del peso total de los productos incluidos:
