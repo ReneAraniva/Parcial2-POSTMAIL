@@ -43,6 +43,7 @@ Crea un nuevo envío y registra automáticamente al cliente si no existe. Los cr
 - Al completar el formulario de envío, los datos del cliente se registran automáticamente.  
 - No es necesario registrar al cliente previamente.  
 - Se guarda el ID generado, junto con el nombre y la conversión del monto ingresado a créditos disponibles.
+- En caso que el cliente ya alla realizado un pedido solo se le descontara el credito segun el peso de su nuevo pedido.
 
 **Funcionamiento de los créditos según el peso**:
 - Cada envío consume créditos del cliente dependiendo del peso total de los productos incluidos:
