@@ -36,6 +36,14 @@ POST /envio
 ```
 **Descripción**: Registra un nuevo envío y descuenta créditos del cliente.
 
+**Funcionamiento de los créditos según el peso**:
+- Cada envío consume créditos del cliente dependiendo del peso total de los productos incluidos:
+  - **Peso ≤ 3 libras**: Consume **1 crédito**.
+  - **Peso > 3 y ≤ 6 libras**: Consume **2 créditos**.
+  - **Peso > 6 libras**: Consume **3 créditos**.
+- Los créditos se descuentan automáticamente del saldo del cliente al registrar el envío.
+- Si el envío es eliminado, los créditos consumidos se devuelven automáticamente al cliente.
+
 **Montos disponibles**:
 - `$135`: 30 créditos.
 - `$160`: 40 créditos.
